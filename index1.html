@@ -1,0 +1,43 @@
+<html><head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+<script src="funciones/jquery-1.11.1.js"></script>
+<script src="funciones/javascript.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+<link rel="stylesheet" href="estilos/estilos.css" type="text/css">
+
+ <!-- ----------- jorgedg96   -----------------------------	 @cokegolYT  	---------------------------------------------- -->
+
+  
+  <title>Parada de bus:</title></head>
+<body><form action=" https://openbus.emtmadrid.es:9443/emt-proxy-server/last/geo/GetStopsFromXY.php"  method="POST">
+
+
+<input name="idClient" id="textoid" value="WEB.SERV.jorged96"  type="hidden">
+
+<input name="passKey" id="textopass" value=""   type="hidden">
+<p>longitud:</p> <input  name="longitude" id="longitud" type="text" value="-3.721101"><br>
+<p>latitud:</p> <input  name="latitude" id="latitud" type="text" value="40.420982"><br>
+<p>radio:</p> <input  name="Radius" id="radio" type="text" ><br>
+
+
+<input type="hidden"  id="es"  name="cultureInfo" value="ES"></br>
+
+
+<input type="button" value="mirar paradas"  onclick="javascript: enviar();"><br>
+
+<br>
+
+
+<div id="texto">
+
+</div>
+<br>
+
+<input type="button" value="mostrar"  onclick="javascript: mostrar();">
+<br>
+<div id="map-canvas"></div>
+</form>
+</body></html>
